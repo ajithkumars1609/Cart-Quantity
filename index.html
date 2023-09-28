@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Quantity</title>
+</head>
+
+<body>
+    <!--Buttons start-->
+    <button onclick="
+        console.log(`Cart Quantity ${cartQunatity}`);
+    ">Show quantity</button>
+    <button onclick="
+        updateCartQuantity('Add to Cart');
+    ">Add to Cart</button>
+    <button onclick="
+        updateCartQuantity('Remove to Cart');
+    ">Remove to Cart</button>
+    <button onclick="
+        updateCartQuantity('+2');
+    ">+2</button>
+    <button onclick="
+        updateCartQuantity('+3');
+    ">+3</button>
+    <button onclick="
+        cartQunatity = 0;
+        console.log(`Cart Quantity ${cartQunatity}`);
+    ">clear</button>
+    <!--Buttons End-->
+    <script>
+        let cartQunatity = 0;
+        // update Cart Quanttity Start //
+        function updateCartQuantity(change) {
+
+            if (change === 'Add to Cart') {
+                cartQunatity++;
+                console.log(`Cart Quantity ${cartQunatity}`);
+            }
+            else if (change === 'Remove to Cart') {
+                cartQunatity--;
+                console.log(`Cart Quantity ${cartQunatity}`);
+            }
+            else if (change === '+2' ) {
+                cartQunatity+=2;
+                console.log(`Cart Quantity ${cartQunatity}`);
+            }
+            else if (change === '+3' ) {
+                cartQunatity+=3;
+                console.log(`Cart Quantity ${cartQunatity}`);
+            }
+        }
+        // update Cart Quanttity End //
+    </script>
+</body>
+
+</html>
