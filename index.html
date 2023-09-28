@@ -39,16 +39,35 @@
                 console.log(`Cart Quantity ${cartQunatity}`);
             }
             else if (change === 'Remove to Cart') {
-                cartQunatity--;
-                console.log(`Cart Quantity ${cartQunatity}`);
+                if (cartQunatity - 1 < 1) {
+                    alert('Cart Quantity Full');
+                }
+                else {
+                    cartQunatity--;
+                    console.log(`Cart Quantity ${cartQunatity}`);
+                }
+
             }
-            else if (change === '+2' ) {
-                cartQunatity+=2;
-                console.log(`Cart Quantity ${cartQunatity}`);
+            else if (change === '+2') {
+
+                if (cartQunatity + 2 > 10) {
+                    alert('Cart Quantity Full')
+                }
+                else {
+                    cartQunatity += 2;
+                    console.log(`Cart Quantity ${cartQunatity}`);
+                }
             }
-            else if (change === '+3' ) {
-                cartQunatity+=3;
-                console.log(`Cart Quantity ${cartQunatity}`);
+            else if (change === '+3') {
+
+                if (cartQunatity + 3 > 10) {
+                    alert('Cart Quantity Full')
+                }
+                else {
+                    cartQunatity += 3;
+                    console.log(`Cart Quantity ${cartQunatity}`);
+                }
+
             }
         }
         // update Cart Quanttity End //
